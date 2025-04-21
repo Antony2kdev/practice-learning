@@ -28,6 +28,15 @@ uint32_t insertBits(uint32_t M, uint32_t N, int i , int j)
 }
 
 
+//swap two numbers using XOR
 
+void swapVar(uint32_t *a, uint32_t *b)
+{
+    if(a==b)return;
 
+    *a = *a^*b;
+    *b = *a ^*b;
+    *a = *a^*b;
+    return ;
 
+}
