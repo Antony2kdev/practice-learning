@@ -40,3 +40,14 @@ void swapVar(uint32_t *a, uint32_t *b)
     return ;
 
 }
+
+
+//reverse 32 bit binary of a number
+uint32_t reverseBits(uint32_t bitNum){
+    bitNum = ((bitNum&0x0000FFFF)<<16)|((bitNum&0xFFFF0000)>>16);
+    bitNum = ((bitNum&0x00FF00FF)<<8)|((bitNum&0xFF00FF00)>>8);
+    bitNum = ((bitNum&0x0F0F0F0F)<<4)|((bitNum&0xF0F0F0F0)>>4);
+    bitNum = ((bitNum&0x33333333)<<2)|((bitNum&0xCCCCCCCC)>>2);
+    bitNum = ((bitNum&0x55555555)<<1)|((bitNum&0xAAAAAAAA)>>1);
+    return bitNum;
+}
